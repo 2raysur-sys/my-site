@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.main {
+  padding-bottom: 120px;
+}
+
+/* ページ幅・左右余白（creators と共通思想） */
+.page-title,
+.mailform {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+.page-title {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 48px;
+  letter-spacing: 0.08em;
+}
+
+/* =========================
+   FORM WRAPPER
+========================= */
+.mailform h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-right: auto;
+}
+
+.form-area {
+  background-color: #f8f8f8;
+  border: 1px solid #aaaaaa;
+  margin-top: 25px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-area dt {
+  width: 200px;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.form-area dt .required::after {
+  content: '必須';
+  font-size: 11px;
+  color: #eb4f32;
+  margin-left: 10px;
+}
+
+.form-area dd {
+  width: calc(100% - 200px);
+  padding: 15px 0;
+}
+
+.input-text {
+  width: 100%;
+  max-width: 280px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.select-box {
+  width: 200px;
+  height: 40px;
+}
+
+.radio-button {
+  display: block;
+  margin-top: 20px;
+}
+
+.radio-button:first-child {
+  margin-top: 0;
+}
+
+.radio-button input {
+  margin-right: 8px;
+}
+
+.message {
+  width: 100%;
+  height: 260px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.confirm-text {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 30px;
+}
+
+.submit-button {
+  background-color: #00449d;
+  color: #ffffff;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #00449d;
+}
+
+@media (max-width: 800px) {
+  .form-area dt,
+  .form-area dd {
+    width: 100%;
+  }
+
+  .form-area dt {
+    padding-bottom: 0;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
