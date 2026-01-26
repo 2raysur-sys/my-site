@@ -112,7 +112,6 @@ img {
   .site-menu ul {
     display: block;
     text-align: center;
-    flex-direction: column;
   }
 
   .site-menu li {
@@ -135,7 +134,6 @@ img {
     padding-right: 20px;
     height: 100%;
     position: relative;
-    flex-direction: column;
   }
 
   .header-logo {
@@ -174,15 +172,9 @@ img {
 
   .main {
     padding-top: 50px;
-    width: 100%;
   }
 
   .copyright {
     margin-top: 50px;
   }
-
-  .pageWrap {
-    padding: 0 16px;
-  }
-
 }
