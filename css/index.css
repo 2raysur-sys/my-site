@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* =========================
+   FIRST VIEW
+========================= */
+
 .first-view {
   height: calc(100vh - 110px);
   background-image: url(../images/index/bg-grid.jpg);
@@ -8,159 +12,205 @@
   background-size: cover;
   display: flex;
   align-items: center;
+  padding: 0 4vw;
+  background-color: #ffffff;
+  position: relative;
 }
 
+/* メッセージ全体 */
 .first-view-text {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #00449d;
+}
+/* 1行目 */
+.block-1 {
+  display: block;
+  font-size: 140px;
   width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-bottom: 80px;
-  color: #ffffff;
-  font-weight: bold;
-  text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.first-view-text h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 56px;
-  line-height: 72px;
+/* 2行目（一番強調） */
+.block-2 {
+  display: inline;
+  font-size: 180px;
+  font-family: 'League Spartan', sans-serif;
 }
 
-.first-view-text p {
-  font-size: 18px;
-  margin-top: 20px;
+/* 3行目 */
+.block-3 {
+  display: inline;
+  font-size: 140px;
 }
 
-.lead {
-  max-width: 1200px;
-  margin: 60px auto;
+.first-view-text02 {
+  font-size: 30px;
+  padding-top: 10px;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
 }
 
-.lead p {
-  line-height: 2;
-  text-align: center;
+.first-view-text{
+  position: relative; color: transparent;
+  &::before{
+    content: ""; position: absolute; z-index: 1; top: 0%; right: 100%; bottom: 0%; left: 0%;
+    background : #00449d;
+  }
+  &.active{
+    animation-name: kf_first-view-text_a;
+    animation-duration: 0s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    &::before{
+      animation-name: kf_first-view-text_b;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+    }
+  }
 }
+@keyframes kf_first-view-text_a {
+  100%{
+    color: inherit;
+  }
+}
+@keyframes kf_first-view-text_b {
+  50%{
+    left: 0%; right: 0%;
+  }
+  100%{
+    left: 100%; right: 0%;
+  }
+}
+
+/* =========================
+   MORE ボタン
+========================= */
 
 .link-button-area {
-  text-align: center;
-  margin-top: 40px;
+  width: 600px;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
-.link-button {
-  background-color: #f4dd64;
-  display: inline-block;
-  min-width: 180px;
-  line-height: 48px;
-  border-radius: 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+@keyframes fadein {
+  0% {
+     opacity: 0;
+     transform: translateY(10px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0px);
+  }
 }
 
-.link-button:hover {
-  background-color: #d8b500;
+/* クリック領域 */
+.link-button-area a {
+  display: flex;              /* 横並び */
+  align-items: center;        /* 縦中央 */
+  height: 100%;
 }
 
-.recommended {
-  background-color: #f8f8f8;
-  padding-top: 45px;
-  padding-bottom: 55px;
+/* MORE */
+.link-button-text {
+  width: 17%;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  color: #00449d;
+  margin-right: 3%;
 }
 
-.recommended h2 {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.recommended h2::after {
-  content: '';
-  display: block;
-  width: 36px;
-  height: 3px;
-  background-color: #000000;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.item-list {
+/* 右側フェーダー（縦並び） */
+.link-button-img-fader {
   display: flex;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  padding-left: 60px;
-  padding-right: 60px;
-  overflow: scroll;
+  flex-direction: column;     /* 上下 */
+  justify-content: center;
 }
 
-.item-list li {
-  flex-shrink: 0;
-  width: 260px;
-  margin-left: 75px;
+.link-button-img-fader img {
+  display: block;
 }
 
-.item-list li:first-child {
-  margin-left: 0;
+.link-button-img-fader01 {
+  width: 18%;
+  position: relative;
+  left: 5%;
+  padding-bottom: 2px;
 }
 
-.item-list dl {
-  margin-top: 20px;
+.link-button-img-fader02 {
+  width: 100%;
 }
 
-.item-list dt {
-  font-weight: bold;
+.link-button-area a {
+  transition-duration: 0.3s;
 }
 
-.item-list dd {
-  font-size: 13px;
-  line-height: 20px;
-  margin-top: 10px;
+.link-button-area a:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
 }
 
-.item-list .price {
-  font-weight: bold;
-  margin-top: 15px;
+.link-button-area a .link-button-img-fader01 {
+  transition-duration: 0.3s;
 }
 
+.link-button-area a:hover .link-button-img-fader01 {
+  transform: translateX(400%);
+  transition: transform 0.7s ease;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 800px) {
-  .first-view {
-    height: calc(100vh - 50px);
-    background-image: url(../images/index/bg-grid.jpg);
-    align-items: flex-start;
-  }
-
   .first-view-text {
-    padding-top: 60px;
-    padding-left: 20px;
+    position: absolute;
+    top: 10%;
   }
 
-  .first-view-text h1 {
-    font-size: 36px;
-    line-height: 48px;
+  /* 1行目 */
+  .block-1 {
+    font-size: 18vw;
   }
 
-  .first-view-text p {
-    font-size: 14px;
-    margin-top: 15px;
+  /* 2行目（一番強調） */
+  .block-2 {
+    font-size: 23vw;
   }
 
-  .lead {
-    padding-left: 20px;
-    padding-right: 20px;
+  /* 3行目 */
+  .block-3 {
+    font-size: 18vw;
   }
 
-  .lead p {
-    text-align: left;
+  .first-view-text02 {
+    font-size: 5vw;
+    padding-top: 2vw;
   }
 
-  .item-list {
-    padding-left: 20px;
-    padding-right: 20px;
+  .link-button-area {
+    width: 400px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
   }
 
-  .item-list li {
-    width: 220px;
-    margin-left: 30px;
+  .link-button-text {
+    font-size: 25px;
   }
 }
+

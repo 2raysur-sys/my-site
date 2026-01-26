@@ -53,6 +53,11 @@ img {
   align-items: center;
 }
 
+.header-inner a:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
 .toggle-menu-button {
   display: none;
 }

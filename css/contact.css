@@ -13,17 +13,18 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 /* =========================
    PAGE TITLE
 ========================= */
-.page-title {
-  margin-top: 80px;
-  margin-bottom: 60px;
+
+.section-page-top {
+  padding: 80px 20px 60px;
   text-align: center;
+}
+
+.page-title {
   font-family: 'League Spartan', sans-serif;
   font-size: 48px;
   letter-spacing: 0.08em;
@@ -35,11 +36,15 @@
 .mailform h3 {
   font-size: 22px;
   margin-bottom: 12px;
-
   width: 930px;
   max-width: 90%;
-  margin-top: 75px;
   margin-right: auto;
+}
+
+.mailform {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 40px;
 }
 
 .form-area {

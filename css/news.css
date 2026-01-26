@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+.section-page-top {
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.page-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 48px;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   NEWS SECTION
+========================= */
+
+.section-news {
+  max-width: 1000px;
+  margin: 0 auto 120px;
+  padding: 0 20px;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  0% {
+     opacity: 0;
+     transform: translateY(10px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0px);
+  }
+}
+
+
+/* =========================
+   NEWS LIST
+========================= */
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 50px;
+}
+
+.news-list-item {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.news {
+  padding: 28px 0;
+  transition: background 0.25s ease;
+}
+
+.news:hover {
+  background: #f7f9fc;
+}
+
+.news-ttl-inner {
+  position: relative;
+  padding-right: 22px; /* 矢印分の余白 */
+}
+
+.news-ttl-inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #1a73e8;
+  transition: transform 0.25s ease;
+}
+
+/* hoverでちょい動かすと今風 */
+.news:hover .news-ttl-inner::after {
+  transform: translate(4px, -50%);
+}
+
+/* =========================
+   NEWS HEADER
+========================= */
+
+.news-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.news-date .date {
+  font-size: 14px;
+  color: #777;
+}
+
+
+/* =========================
+   TAG
+========================= */
+
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  background: #999; /* JSで色上書き */
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.news-ttl-inner {
+  text-decoration: none;
+  color: #003a85;
+  display: inline-block;
+}
+
+.ttl-2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+  transition: color 0.25s ease;
+}
+
+.news:hover .ttl-2 {
+  color: #1a73e8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 36px;
+  }
+
+  .news {
+    padding: 20px 0;
+  }
+
+  .ttl-2 {
+    font-size: 16px;
+  }
+}
