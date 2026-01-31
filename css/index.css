@@ -177,7 +177,7 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .first-view {
     width: 100vw;
   }
