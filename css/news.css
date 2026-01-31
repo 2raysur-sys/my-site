@@ -148,7 +148,7 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .page-title {
     font-size: 36px;
   }

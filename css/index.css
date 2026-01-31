@@ -24,6 +24,7 @@
   letter-spacing: -0.02em;
   color: #00449d;
 }
+
 /* 1行目 */
 .block-1 {
   display: block;
@@ -176,7 +177,11 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+  .first-view {
+    width: 100vw;
+  }
+
   .first-view-text {
     position: absolute;
     top: 10%;
@@ -203,14 +208,14 @@
   }
 
   .link-button-area {
-    width: 400px;
+    width: 250px;
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 15px;
+    left: 15px;
   }
 
   .link-button-text {
-    font-size: 25px;
+    font-size: 12px;
   }
 }
 

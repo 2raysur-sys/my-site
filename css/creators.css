@@ -159,7 +159,7 @@ span.name02 {
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .section-profile .item {
     flex-direction: column;
     gap: 40px;
@@ -186,11 +186,22 @@ span.name02 {
     font-size: 36px;
   }
 
+  .section-profile .item:first-child {
+    padding-top: 0px;
+  }
+
   .section-page-top {
     padding: 60px 20px 40px;
   }
 
   .description p {
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  .description {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
   }
 }

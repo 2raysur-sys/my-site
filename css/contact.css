@@ -7,7 +7,6 @@
   padding-bottom: 120px;
 }
 
-/* ページ幅・左右余白（creators と共通思想） */
 .page-title,
 .mailform {
   max-width: 1200px;
@@ -134,7 +133,17 @@
   background-color: #00449d;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+  .mailform {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+  }
+
+  .mailform h3 {
+    font-size: 18px;
+  }
+
   .form-area dt,
   .form-area dd {
     width: 100%;

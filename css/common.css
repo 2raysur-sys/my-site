@@ -108,7 +108,7 @@ img {
   margin-top: 40px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .site-menu ul {
     display: block;
     text-align: center;
@@ -124,6 +124,7 @@ img {
     left: 0;
     right: 0;
     background-color: #ffffff;
+    width: 100vw;
     height: 50px;
     z-index: 10;
     /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); */

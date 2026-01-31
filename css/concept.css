@@ -127,11 +127,12 @@
   margin-top: 100px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .feature {
     display: block;
-    width: 500px;
     margin-top: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .feature-text {
@@ -146,6 +147,10 @@
     width: 100%;
     height: auto;
     margin-top: 25px;
+  }
+
+  .feature-text p {
+    font-size: 13px;
   }
 
   .movie {
