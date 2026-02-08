@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: auto;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+.section-page-top {
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.page-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 48px;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   PRIVACY POLICY SECTION
+========================= */
+
+.section-privacy-policy {
+  margin-top: 50px;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.main {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto 140px;
+}
+
+/* 下段：サイド＋コンテンツ */
+
+.section-left-menu {
+  float: left;
+  width: 240px;
+  position: sticky;
+  top: 140px;
+}
+
+.privacy-policy-content {
+  margin-left: 310px;
+}
+
+/* =========================
+   SIDE MENU
+========================= */
+
+.section-left-menu dl {
+  border-left: 2px solid #00449d;
+  padding-left: 18px;
+}
+
+.section-left-menu a {
+  display: block;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #00449d;
+  opacity: 0.6;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+
+.section-left-menu a:hover {
+  opacity: 1;
+}
+
+.section-left-menu a.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.section {
+  margin-bottom: 110px;
+  scroll-margin-top: 130px;
+}
+
+.section_inner_wrap {
+  max-width: 820px;
+}
+
+.section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #00449d;
+  margin-top: 20px;
+}
+
+.section h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.section h3::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #00449d;
+  margin-top: 16px;
+}
+
+.section article {
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 25px;
+  color: #00449d;
+}
+
+.section article ul {
+  margin-top: 15px;
+  padding-left: 22px;
+}
+
+.section article li {
+  list-style: disc;
+  line-height: 28px;
+}
+
+/* =========================
+   CLEAR FLOAT
+========================= */
+
+.privacy-policy-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+/* .scroll_down_wrap {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll_down_wrap.is-active {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .section-left-menu {
+    float: none;
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-bottom: 50px;
+  }
+
+  .privacy-policy-content {
+    margin-left: 0;
+  }
+
+  .section-left-menu dl {
+    border-left: none;
+    border-bottom: 2px solid #00449d;
+    padding-left: 0;
+    padding-bottom: 15px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .section h3 {
+    font-size: 20px;
+  }
+
+  .section article {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
