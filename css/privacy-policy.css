@@ -25,6 +25,8 @@ html {
 
 .section-privacy-policy {
   margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* =========================
@@ -83,7 +85,7 @@ html {
 ========================= */
 
 .section {
-  margin-bottom: 110px;
+  margin-bottom: 60px;
   scroll-margin-top: 130px;
 }
 
@@ -206,15 +208,6 @@ html {
 ========================= */
 
 @media (max-width: 800px) {
-  .section-privacy-policy {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .section {
-    margin-bottom: 60px;
-  }
-
   .section article {
     font-size: 15px;
   }
