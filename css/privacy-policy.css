@@ -200,3 +200,23 @@ html {
     line-height: 26px;
   }
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .section-privacy-policy {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    margin-bottom: 60px;
+  }
+
+  .section article {
+    font-size: 15px;
+  }
+}
+
